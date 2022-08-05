@@ -1,1 +1,1 @@
-worker: npm start
+worker: node deploy/destroy --global

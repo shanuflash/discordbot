@@ -1,1 +1,1 @@
-worker: yarn destroy
+worker: node deploy/destory

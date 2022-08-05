@@ -1,1 +1,1 @@
-worker: node deploy/destory
+worker: node deploy/destroy

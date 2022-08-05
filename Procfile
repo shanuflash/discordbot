@@ -1,1 +1,1 @@
-worker: node deploy/destroy
+worker: node deploy/destroy --global

@@ -1,11 +1,10 @@
 const SlashCommand = require("../../lib/SlashCommand");
 const { MessageEmbed } = require("discord.js");
-const escapeMarkdown = require('discord.js').Util.escapeMarkdown;
 
 const command = new SlashCommand()
   .setName("play")
   .setDescription(
-    "Searches and plays the requested song \nSupports: \nYoutube, Spotify, Deezer, Apple Music"
+    "Searches and plays the requested song\n__Supports:__\nYoutube, Spotify, Deezer, Apple Music"
   )
   .addStringOption((option) =>
     option
@@ -101,14 +100,12 @@ const command = new SlashCommand()
       if (!player.playing && !player.paused && !player.queue.size) {
         player.play();
       }
-      var title = escapeMarkdown(res.tracks[0].title)
-      var title = title.replace(/\]/g,"")
-      var title = title.replace(/\[/g,"")
+
       let addQueueEmbed = new MessageEmbed()
         .setColor(client.config.embedColor)
         .setAuthor({ name: "Added to queue", iconURL: client.config.iconURL })
         .setDescription(
-          `[${title}](${res.tracks[0].uri})` || "No Title"
+          `[${res.tracks[0].title}](${res.tracks[0].uri})` || "No Title"
         )
         .setURL(res.tracks[0].uri)
         .addFields(

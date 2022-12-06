@@ -58,11 +58,11 @@ const command = new SlashCommand()
 		);
 		
 		tempArray.forEach((cmd) => {
-			helpEmbed.addFields({name: cmd.name, value: cmd.description});
+			helpEmbed.addField(cmd.name, cmd.description);
 		});
-		helpEmbed.addFields({
-			name: "Credits",
-			value: `Discord Music Bot Version: v${
+		helpEmbed.addField(
+			"Credits",
+			`Discord Music Bot Version: v${
 				require("../../package.json").version
 			}; Build: ${ gitHash }` +
 			"\n" +
@@ -112,12 +112,12 @@ const command = new SlashCommand()
 			tempArray.forEach((cmd) => {
 				//console.log(cmd);
 				helpEmbed
-					.addFields({ name: cmd.name, value: cmd.description})
+					.addField(cmd.name, cmd.description)
 					.setFooter({ text: `Page ${ pageNo + 1 } / ${ maxPages }` });
 			});
-			helpEmbed.addFields({
-				name: "Credits",
-				value: `Discord Music Bot Version: v${
+			helpEmbed.addField(
+				"Credits",
+				`Discord Music Bot Version: v${
 					require("../../package.json").version
 				}; Build: ${ gitHash }` +
 				"\n" +

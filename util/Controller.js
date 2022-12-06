@@ -118,9 +118,8 @@ module.exports = async (client, interaction) => {
 	}
 
 	if (property === "Next") {
-                const song = player.queue.current;
-	        const autoQueue = player.get("autoQueue");
-                if (player.queue[0] == undefined && (!autoQueue || autoQueue === false)) {
+     const song = player.queue.current;
+	 if (player.queue[0] == undefined) {
 		return interaction.reply({
                         ephemeral: true,
 			embeds: [

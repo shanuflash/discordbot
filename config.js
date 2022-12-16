@@ -22,13 +22,13 @@ module.exports = {
 	// Lavalink server; public lavalink -> https://lavalink-list.darrennathanael.com/; create one yourself -> https://darrennathanael.com/post/how-to-lavalink
 	nodes: [
 		{
-			identifier: "Main Node", //- Used for indentifier in stats commands.
-			host: "lavalink.oops.wtf", //- The host name or IP of the lavalink server.
-			port: 443, // The port that lavalink is listening to. This must be a number!
-			password: "www.freelavalink.ga", //- The password of the lavalink server.
-			retryAmount: 99999999, //- The amount of times to retry connecting to the node if connection got dropped.
-			retryDelay: 1000, //- Delay between reconnect attempts if connection is lost.
-			secure: true, //- Can be either true or false. Only use true if ssl is enabled!
+			identifier: "Main Node", 
+			host: "node1.kartadharta.xyz", 
+			port: 443, 
+			password: "kdlavalink", 
+			retryAmount: 99999999,
+			retryDelay: 1000, 
+			secure: true, 
 		},
 	],
 	embedColor: "#2f3136", //- Color of the embeds, hex supported
